@@ -29,6 +29,13 @@ public class LinkedListMultiSet extends MultiSet {
     }
 
     public boolean contains(int item) {
+        Node curr = front;
+        while(curr != null) {
+            if(curr.item == item) {
+                return true;
+            }
+            curr = curr.next;
+        }
         return false;
     }
 
